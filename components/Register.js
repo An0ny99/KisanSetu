@@ -1,9 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View,TextInput , TouchableOpacity,Image} from 'react-native'
+import { StyleSheet, Text, View,TextInput , TouchableOpacity,Image,ScrollView,SafeAreaView } from 'react-native'
 import * as Animatable from 'react-native-animatable';
 
 export default function Register({navigation}) {
     return (
+        <SafeAreaView style={{ flex:1 }}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{ flex:1 }}  contentContainerStyle={{ flexGrow: 1 }}>
         <Animatable.View animation="fadeIn" style={styles.container} >
              <Image source={require('../images/kisan.png')} style={styles.img} />
             <Text style={styles.header}>REGISTER</Text>
@@ -26,6 +28,8 @@ export default function Register({navigation}) {
             <Text style={styles.t1}>Already Have An Account ? Login Here</Text>
         </TouchableOpacity>
         </Animatable.View>
+        </ScrollView>
+        </SafeAreaView>
     )
 }
 

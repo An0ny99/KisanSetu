@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, View, Image,Dimensions, TouchableOpacity,ScrollView,SafeAreaView} from 'react-native';
 import * as Animatable from 'react-native-animatable';
-
+const {width,height} = Dimensions.get('window')
 export function Splashscreen({ navigation }) {
   return (
     <View style={styles.container}>
@@ -27,16 +27,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#5e92f3',
   },
   header: {
-    flex: 2,
+    paddingTop:30,
     alignItems: 'center',
     justifyContent:'center'
   },
   footer: {
-    flex: 1,
+    flex:1,
     borderTopLeftRadius: 50,
     borderTopRightRadius: 50,
     backgroundColor: '#003c8f',
-    paddingTop: 30,
+    paddingTop: 20,
     alignItems: 'center',
   },
   title: {
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   button:{
       marginTop:20,
-      width:'80%',
+      width:'90%',
       alignItems:'center',
       backgroundColor:'white',
       padding:20,

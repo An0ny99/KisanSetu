@@ -1,9 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View,TextInput , TouchableOpacity,Image} from 'react-native'
+import { StyleSheet, Text, View,TextInput , TouchableOpacity,Image,ScrollView,SafeAreaView} from 'react-native'
 import * as Animatable from 'react-native-animatable';
 
 export default function Login({navigation}) {
     return (
+        <SafeAreaView style={{ flex:1,  height: '100%' }}>
+        <ScrollView showsVerticalScrollIndicator={false} style={{ flex:1,  height: '100%' }} contentContainerStyle={{ flexGrow: 1 }}>
         <Animatable.View animation="fadeIn" style={styles.container} >
              <Image source={require('../images/kisan.png')} style={styles.img} />
             <Text style={styles.header}>LOGIN</Text>
@@ -20,12 +22,15 @@ export default function Login({navigation}) {
             <Text style={styles.t1}>Don't Have An Account ? Register Here</Text>
         </TouchableOpacity>
         </Animatable.View>
+       </ScrollView>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
         flex:1,
+        height:'100%',
         alignItems:'center',
         justifyContent:'center',
         backgroundColor:'#5e92f3'
